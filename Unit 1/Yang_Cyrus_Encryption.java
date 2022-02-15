@@ -56,7 +56,7 @@ public class Yang_Cyrus_Encryption {
 		  //this is for setting up the spacing locations
 		  for (int i = 1; i < regularStringFragmented.length - 1; i++) {
 			  int k = i;
-		   if (regularStringFragmented[k] == 20) {
+		   if (regularStringFragmented[k] == ' ') {
            	regularStringSize[k] = 0;
            }
 			  i++;
@@ -72,7 +72,7 @@ public class Yang_Cyrus_Encryption {
 		  }
 
 		  //this was to debug the glitch in the second letter
-		  if (regularStringFragmented[0] != ' ') {
+		  if (regularStringFragmented[0] != ' ' || regularStringFragmented[1] != ' ' ) {
 		  regularStringFragmented[1] = (char)(regularStringFragmented[1] + 2);
 		  }
 		  
@@ -86,7 +86,13 @@ public class Yang_Cyrus_Encryption {
 			   }  
 		  }
 
-
+		  //debugged another bug 
+		  if (regularStringFragmented[1] == '$' ) {
+		  regularStringFragmented[1] = ' ';
+		  regularStringFragmented[2] = (char) (regularStringFragmented[2] - 2);
+		  }
+		  
+		  
 		  // returns the user the value of the string
 		  return String.valueOf(regularStringFragmented); 
 		  

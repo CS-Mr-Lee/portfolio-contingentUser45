@@ -13,7 +13,7 @@ public class Human {
      /*
     Human Attributes:
     Contains 
-    object eaten
+    name
     weight
     energy levels
      */

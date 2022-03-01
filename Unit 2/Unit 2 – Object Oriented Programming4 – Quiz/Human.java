@@ -81,7 +81,7 @@ public class Human {
           if (calories == -1) {
           System.out.println(name + " does not have enough " + vegName + " to eat.");
           } else {
-          System.out.println(name + "Human has eaten " + gramsEaten + " of " + vegName);
+          System.out.println(name + " has eaten " + gramsEaten + " of " + vegName);
           this.weight = weight + 0.001 * gramsEaten;
           this.energyLevel = energyLevel + (int)(calories * gramsEaten * 0.01 * 0.01 / 15);
           }
@@ -98,7 +98,7 @@ public class Human {
           } else if (calories == -1) {
           System.out.println(name + " does not have enough " + foodName + " to eat.");
           } else {
-          System.out.println(name + "Human has eaten " + gramsEaten + " of " + foodName);
+          System.out.println(name + " has eaten " + gramsEaten + " of " + foodName);
           this.weight = weight + 0.001 * gramsEaten;
           this.energyLevel = energyLevel + (int)(calories * gramsEaten * 0.01 * 0.01 / 15);
         }

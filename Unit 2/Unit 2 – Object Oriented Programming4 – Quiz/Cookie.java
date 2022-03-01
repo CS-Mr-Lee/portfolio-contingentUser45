@@ -102,7 +102,7 @@ public class Cookie {
     //used determine what exactly has been eaten and how much of it has been eaten
     public int eaten(double weight) {
     // checks for packaging, if packaged, return error code -2
-		if(isPackaged = true) {
+		if(isPackaged == true) {
 			return -2;
     // checks for weight is possible, if not, return error code -1
 		} else if (weight > this.weight || this.weight == 0) {

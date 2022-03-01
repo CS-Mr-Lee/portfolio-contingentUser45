@@ -18,9 +18,7 @@ public class Human {
     energy levels
      */
 
-    /* the name of the object eaten 
-    * which is a cookie
-    * and cookie
+    /* the name of person
     */
     private String name;
 
@@ -62,13 +60,13 @@ public class Human {
 
       //the human sleeps and regenerates energy (must be higher than 10 hours for him to regenerate)
       public void sleep(int hours){
-        System.out.println("Human has slept for " + hours);
+        System.out.println(name + " has slept for " + hours);
         this.energyLevel = (int) (energyLevel + hours * 0.1);
       }
 
       //human does a run by designated amount of time given
       public void run(double km){
-        System.out.println("Human ran for " + km);
+        System.out.println(name + " ran for " + km);
         this.energyLevel = (int) (energyLevel / (
           km * 0.03));
         this.weight = weight - 0.001 * km ;
@@ -76,9 +74,9 @@ public class Human {
 
       public void eat(Vegetable veg, double grams){
         if (grams > weight){
-          System.out.println("Human does not have enough " + name + " to eat.");
+          System.out.println(name + " does not have enough " + name + " to eat.");
         } else {
-          System.out.println("Human has eaten " + grams + " of " + name);
+          System.out.println(name + "has eaten " + grams + " of " + name);
           this.weight = weight + 0.001 * grams;
           this.energyLevel = energyLevel + (int)(calories * grams * 0.01 * 0.01 / 15);
           }
@@ -87,17 +85,64 @@ public class Human {
 
       public void eat(Cookie food, double grams){
         if (grams > weight){
-          System.out.println("Human does not have enough " + name + " to eat.");
-          } else if (isPackaged = true){
-           System.out.println("Human: What is this? I can't eat that!");
+          System.out.println(name + " does not have enough " + name + " to eat.");
           } else {
-          System.out.println("Human has eaten " + grams + " of " + name);
+          System.out.println(name + "Human has eaten " + grams + " of " + name);
           this.weight = weight + 0.001 * grams;
           this.energyLevel = energyLevel + (int)(calories * grams * 0.01 * 0.01 / 15);
         }
 
-        	
-    toString();
-   }
+    } 	
+
+      //String to make human name visible
+      public String getName() {
+      return name;
+      }
+
+      //Double for weight of person
+      public double getWeight() {
+      return weight;
+      }
+
+      //enegy level
+      public int getEnergyLevel() {
+      return energyLevel;
+      }
+
+   // Method to print out human details
+      public String toString() {
+    String output = "Name: ";
+    output = output + name + "\n" ;
+    output = output + "Weight: "+ weight + "kg\n";
+    output = output + "Energy: "+ energyLevel + "%\n";
+
+    // extra lines for extra information on sitrep of human energy levels
+    if (energyLevel < 25) {
+      output = output + name + " is exausted";
+    } else if (energyLevel > 25 && energyLevel < 50) {
+      output = output + name + " is tired";
+    } else if(energyLevel > 50 && energyLevel < 75) {
+      output = output + name + " is Ok";
+    } else if (energyLevel > 75 && energyLevel < 100) {
+      output = output + name + " is energized";
+    } else {
+      output = output + name + " has reached beyond peak human capacity energy";
+    } 
+
+    // extra lines for extra information on sitrep of human weight
+    if (weight < 25) {
+      output = output + name + " is malnorished. FEED NOW!";
+    } else if (weight > 25 && weight < 50) {
+      output = output + name + " is underweight, you should eat";
+    } else if(weight > 50 && weight < 75) {
+      output = output + name + " is at normal weight";
+    } else if (weight > 75 && weight < 100) {
+      output = output + name + " is overweight";
+    } else {
+      output = output + name + " has reached Nikocado level fat";
+    } 
+        
+    return output;
+  }
 }
   

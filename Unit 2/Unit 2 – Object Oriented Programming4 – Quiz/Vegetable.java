@@ -1,10 +1,10 @@
- @SuppressWarnings("unused")
+  @SuppressWarnings("unused")
    
 /** * Name: Cyrus Yang
 * Teacher: Mr Lee 
 * Date: Mar 1 2022 
-* Object: Cookie
-* Description: creates a cookie class to be cookies
+* Object: Vegetable
+* Description: creates a vegetable class to be cookies
 * and more  
 */
 public class Vegetable {
@@ -114,4 +114,3 @@ public class Vegetable {
 }
   
   
-

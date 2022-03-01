@@ -57,6 +57,21 @@ public class Human {
     Methods
     The driving side of human running
     */
+ 
+       //String to make human name visible
+      public String getName() {
+      return name;
+      }
+
+      //Double for weight of person
+      public double getWeight() {
+      return weight;
+      }
+
+      //energy level sets up
+      public int getEnergyLevel() {
+      return energyLevel;
+      }
 
       //the human sleeps and regenerates energy (must be higher than 10 hours for him to regenerate)
       public void sleep(int hours){
@@ -93,21 +108,6 @@ public class Human {
         }
 
     } 	
-
-      //String to make human name visible
-      public String getName() {
-      return name;
-      }
-
-      //Double for weight of person
-      public double getWeight() {
-      return weight;
-      }
-
-      //enegy level
-      public int getEnergyLevel() {
-      return energyLevel;
-      }
 
    // Method to print out human details
       public String toString() {

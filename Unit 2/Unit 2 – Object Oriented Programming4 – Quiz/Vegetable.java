@@ -1,4 +1,4 @@
-  @SuppressWarnings("unused")
+ @SuppressWarnings("unused")
    
 /** * Name: Cyrus Yang
 * Teacher: Mr Lee 
@@ -47,7 +47,6 @@ public class Vegetable {
 
       // this set into stone objects are immediately set into place with the variables given by the numbers.
 		  this.name = setName;
-      this.isPackaged = isPackaged;
 
       //in case of underweight objects it sets it to 0 to prevent issues
 		  if(weight < 0) {
@@ -84,11 +83,6 @@ public class Vegetable {
 		  return calories;
 	  }
 
-    //used to open the bag to set cookie is unpackaged
-    public void openCookieWrapper() {
-		isPackaged = false;
-	  }
-
     //used determine what exactly has been eaten and how much of it has been eaten
     public int eaten(double weight) {
     // checks for weight is possible, if not, return error code -1
@@ -114,3 +108,4 @@ public class Vegetable {
 }
   
   
+

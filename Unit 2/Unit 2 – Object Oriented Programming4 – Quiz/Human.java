@@ -72,34 +72,37 @@ public class Human {
         this.weight = weight - 0.001 * km ;
         }
 
+      //eats vegtables
       public void eat(Vegetable veg, double grams){
          int calories = veg.eaten(grams);
+         double gramsEaten = grams;
+         String vegName = veg.getName();
 
-          if (calories == -1)
-          System.out.println(name + " does not have enough " + veg.name + " to eat.");
+          if (calories == -1) {
+          System.out.println(name + " does not have enough " + vegName + " to eat.");
           } else {
-          System.out.println(name + "Human has eaten " + grams + " of " + veg.name);
-          this.weight = weight + 0.001 * grams;
-          this.energyLevel = energyLevel + (int)(calories * grams * 0.01 * 0.01 / 15);
+          System.out.println(name + "Human has eaten " + gramsEaten + " of " + vegName);
+          this.weight = weight + 0.001 * gramsEaten;
+          this.energyLevel = energyLevel + (int)(calories * gramsEaten * 0.01 * 0.01 / 15);
           }
-        }
-        
+ 		}
 
+      //eats cookies
       public void eat(Cookie food, double grams){
-
         int calories = food.eaten(grams);
-
+        double gramsEaten = grams;
+        String foodName = food.getName();
+        
         if (calories == -2){
-          System.out.println(name + " cannot eat " + food.name + ", it is in a bag");
-          } else if (calories == -1)
-          System.out.println(name + " does not have enough " + food.name + " to eat.");
+          System.out.println(name + " cannot eat " + foodName + ", it is in a package");
+          } else if (calories == -1) {
+          System.out.println(name + " does not have enough " + foodName + " to eat.");
           } else {
-          System.out.println(name + "Human has eaten " + grams + " of " + food.name);
-          this.weight = weight + 0.001 * grams;
-          this.energyLevel = energyLevel + (int)(calories * grams * 0.01 * 0.01 / 15);
+          System.out.println(name + "Human has eaten " + gramsEaten + " of " + foodName);
+          this.weight = weight + 0.001 * gramsEaten;
+          this.energyLevel = energyLevel + (int)(calories * gramsEaten * 0.01 * 0.01 / 15);
         }
-
-    } 	
+      }
 
       //String to make human name visible
       public String getName() {
@@ -152,5 +155,4 @@ public class Human {
     return output;
   }
 }
-  
   

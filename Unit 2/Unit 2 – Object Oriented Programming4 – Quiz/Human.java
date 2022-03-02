@@ -114,7 +114,7 @@ public class Human {
       return weight;
       }
 
-      //enegy level
+      //energy level
       public int getEnergyLevel() {
       return energyLevel;
       }

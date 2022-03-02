@@ -35,8 +35,7 @@ public class Yang_Cyrus_OOQuiz1 {
 		Human person1 = new Human(name, weight, 100);
 		
 		Vegetable vegetable1 = new Vegetable("Mysterious Veggie", 690, 120);
-		
-		Cookie cookie = new Cookie();
+
 		Cookie cookie1 = new Cookie("Garglamav Brownie", 100, 300, true);
 		Cookie cookie2 = new Cookie("Kit Fisto Cookies", 200, 500, false);
 

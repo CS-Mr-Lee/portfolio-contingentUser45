@@ -128,28 +128,28 @@ public class Human {
 
     // extra lines for extra information on sitrep of human energy levels
     if (energyLevel < 25) {
-      output = output + name + " is exausted";
+      output = output + name + " is exausted\n";
     } else if (energyLevel > 25 && energyLevel < 50) {
-      output = output + name + " is tired";
+      output = output + name + " is tired\n";
     } else if(energyLevel > 50 && energyLevel < 75) {
-      output = output + name + " is Ok";
+      output = output + name + " is Ok\n";
     } else if (energyLevel > 75 && energyLevel < 100) {
-      output = output + name + " is energized";
+      output = output + name + " is energized\n";
     } else {
-      output = output + name + " has reached beyond peak human capacity energy";
+      output = output + name + " has reached beyond peak human capacity energy\n";
     } 
 
     // extra lines for extra information on sitrep of human weight
     if (weight < 25) {
-      output = output + name + " is malnorished. FEED NOW!";
+      output = output + name + " is malnorished. FEED NOW!\n";
     } else if (weight > 25 && weight < 50) {
-      output = output + name + " is underweight, you should eat";
+      output = output + name + " is underweight, you should eat\n";
     } else if(weight > 50 && weight < 75) {
-      output = output + name + " is at normal weight";
+      output = output + name + " is at normal weight\n";
     } else if (weight > 75 && weight < 100) {
-      output = output + name + " is overweight";
+      output = output + name + " is overweight\n";
     } else {
-      output = output + name + " has reached Nikocado level fat";
+      output = output + name + " has reached Nikocado level fat\n";
     } 
         
     return output;

@@ -120,4 +120,14 @@ public class Vehicle {
         this.width = width;
 	  }
     }
+		// Method to print out information details
+      public String toString() {
+    String output = "Name of Vehicle: ";
+    output = output + name + "\n" ;
+    output = output + "Brand: "+ brand + "kg\n";
+    output = output + "Country of Origin: "+ originCountry + "kg\n";
+    output = output + "Price: "+ price + "kg\n";
+    output = output + "Dimensions: " + length + "m by" + width + "m\n";
+    output = output + "Fuel left: "+ fuelLeft + "/" + maximumFuelCapacity + "%\n";
+  }
 }

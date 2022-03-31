@@ -6,64 +6,20 @@
  * Description: creates a tank class
  */
 
-public class NewTank {
+public class NewTank extends Vehicle {
     /*
     Tank Attributes:
     List of Contained Variables
-    originCountry : String
-    fuelEfficency : double
-    brand : String
-    fuelLeft : double
-    price : double
-    length: double
-    width : double
+    everything in vehicle class
     weapons :  String
-    fuelCapacity: double
+
      */
 
      /* name of the vehicle
     */
-    private String name;
-  
-    /* original country of maunfacture
-    */
-    private String originCountry;
-
-    /* the fuel capacity of the vehicle
-    */
-    private double maximumFuelCapacity;
-
-    /* the fuel efficency used to calculate how much fuel
-    */
-    private double fuelEfficency;
-
-    /* the fuel remaining inside of the fuel tank of the vehicle
-    */
-    private double fuelLeft;
-
-    /* the fuel capacity of the vehicle
-    */
-    private double fuelCapacity;
-
     /* the weapons used for the tank
     */
     private String weapons;
-
-    /* the brand of the vehicle
-    */
-    private String brand;
-
-    /* the price of the vehicle
-    */
-    private double price;
-
-    /* the length of the vehicle
-    */
-    private double length;
-
-    /* the length of the vehicle
-    */
-    private double width;
 
   /*
     * Constructor - sets up the values
@@ -97,31 +53,11 @@ public class NewTank {
     //this completely sets up the tank with every single attachment and parts together
 	  public Tank(String name, String originCountry, String weapons, double maximumFuelCapacity, double fuelLeft, double fuelEfficency, double fuelCapacity, String brand, double price, double length, double width) throws Exception {
 
+      super(name, originCountry, maximumFuelCapacity, fuelLeft, fuelEfficency,
+       fuelCapacity, brand,  price, length, width);
+
       // this sets all string variables together
-		  this.name = name;
-      this.originCountry = originCountry;
       this.weapons = weapons;
-      this.brand = brand;
-      
-      //in case of invalid parameters, it will immediately throw an exception
-		  if((maximumFuelCapacity <= 0)) {
-			    throw new Exception("Parameters Invalid");
-        } else if((fuelEfficency <= 0)){
-			    throw new Exception("Parameters Invalid");
-        }  else if((price <= 0)){
-			    throw new Exception("Parameters Invalid");
-        } else if((length <= 0)){
-			    throw new Exception("Parameters Invalid");
-        } else if((width <= 0)){
-			    throw new Exception("Parameters Invalid");
-	    } else {
-			 this.maximumFuelCapacity = maximumFuelCapacity;
-        this.fuelLeft = fuelLeft;
-        this.fuelEfficency = fuelEfficency;
-        this.fuelCapacity = fuelCapacity;
-        this.price = price;
-        this.length = length; 
-        this.width = width;
 	  }
     }
 

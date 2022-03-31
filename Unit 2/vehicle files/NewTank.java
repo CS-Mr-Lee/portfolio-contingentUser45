@@ -6,64 +6,20 @@
  * Description: creates a tank class
  */
 
-public class NewTank {
+public class NewTank extends Vehicle {
     /*
     Tank Attributes:
     List of Contained Variables
-    originCountry : String
-    fuelEfficency : double
-    brand : String
-    fuelLeft : double
-    price : double
-    length: double
-    width : double
+    everything in vehicle class
     weapons :  String
-    fuelCapacity: double
      */
 
      /* name of the vehicle
     */
-    private String name;
-  
-    /* original country of maunfacture
-    */
-    private String originCountry;
-
-    /* the fuel capacity of the vehicle
-    */
-    private double maximumFuelCapacity;
-
-    /* the fuel efficency used to calculate how much fuel
-    */
-    private double fuelEfficency;
-
-    /* the fuel remaining inside of the fuel tank of the vehicle
-    */
-    private double fuelLeft;
-
-    /* the fuel capacity of the vehicle
-    */
-    private double fuelCapacity;
-
     /* the weapons used for the tank
     */
     private String weapons;
-
-    /* the brand of the vehicle
-    */
-    private String brand;
-
-    /* the price of the vehicle
-    */
-    private double price;
-
-    /* the length of the vehicle
-    */
-    private double length;
-
-    /* the length of the vehicle
-    */
-    private double width;
+}
 
   /*
     * Constructor - sets up the values
@@ -182,16 +138,8 @@ public class NewTank {
   }  
 
   // Method to print out information details
-      public String toString() {
-    String output = "Name of Tank: ";
-    output = output + name + "\n" ;
-    output = output + "Brand: "+ brand + "kg\n";
-    output = output + "Country of Origin: "+ originCountry + "kg\n";
-    output = output + "Price: "+ price + "kg\n";
-    output = output + "Weapons on Tank: "+ weapons + "kg\n";
-    output = output + "Weapons on Tank: "+ weapons + "kg\n";  
-    output = output + "Price: "+ price + "kg\n";
-    output = output + "Dimensions: " + length + "m by" + width + "m\n";
-    output = output + "Fuel left: "+ fuelLeft + "/" + maximumFuelCapacity + "%\n";
+   public String toString() {
+      return super.toString() + "\n Weapons: " + this.weapon;
+   }
   }
 }

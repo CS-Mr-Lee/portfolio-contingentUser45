@@ -27,57 +27,18 @@ public class NewTank extends Vehicle {
     */
   
     //sets up the default settings of the tank (Unnamed)
-	  public Tank() {
-      //general info of the tank
-      this.name = " ";
-		  this.originCountry = " ";
-      this.weapons = " ";
-      this.maximumFuelCapacity = -1;
-
-      //fuel related statistics for vehicle purposes
-      this.fuelLeft = -1;
-      this.fuelEfficency = -1;
-      this.fuelCapacity = -1;
-
-      //market related statistics 
-      this.brand = " ";
-      this.price = -1;
-
-      //dimension statistics
-      this.length = -1;
-      this.width = -1;
-      
-
-	}
+	public Tank() {
+	super();     
+	this.weapons = " ";
+}
 
     //this completely sets up the tank with every single attachment and parts together
-	  public Tank(String name, String originCountry, String weapons, double maximumFuelCapacity, double fuelLeft, double fuelEfficency, double fuelCapacity, String brand, double price, double length, double width) throws Exception {
-
+	  public Tank(String name, String originCountry, String weapons, double maximumFuelCapacity, double fuelLeft, double fuelEfficency,
+		      double fuelCapacity, String brand, double price, double length, double width) throws Exception {
+      super(name, originCountry, maximumFuelCapacity, fuelLeft, fuelEfficency,
+       fuelCapacity, brand,  price, length, width);
       // this sets all string variables together
-		  this.name = name;
-      this.originCountry = originCountry;
       this.weapons = weapons;
-      this.brand = brand;
-      
-      //in case of invalid parameters, it will immediately throw an exception
-		  if((maximumFuelCapacity <= 0)) {
-			    throw new Exception("Parameters Invalid");
-        } else if((fuelEfficency <= 0)){
-			    throw new Exception("Parameters Invalid");
-        }  else if((price <= 0)){
-			    throw new Exception("Parameters Invalid");
-        } else if((length <= 0)){
-			    throw new Exception("Parameters Invalid");
-        } else if((width <= 0)){
-			    throw new Exception("Parameters Invalid");
-	    } else {
-			 this.maximumFuelCapacity = maximumFuelCapacity;
-        this.fuelLeft = fuelLeft;
-        this.fuelEfficency = fuelEfficency;
-        this.fuelCapacity = fuelCapacity;
-        this.price = price;
-        this.length = length; 
-        this.width = width;
 	  }
     }
 

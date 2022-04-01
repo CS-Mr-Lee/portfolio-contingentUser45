@@ -1,5 +1,5 @@
 /**
- * Name: Zain Siddiqui
+ * Name: Zain Siddiqui & revised by Cyrus Yang
  * Teacher: Mr Lee
  * Date: Mar 1 2022
  * Object: SuperClass
